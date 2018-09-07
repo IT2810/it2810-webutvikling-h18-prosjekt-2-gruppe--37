@@ -1,0 +1,31 @@
+.content {
+  grid-area: content;
+  grid-template-columns: 1fr;
+  grid-template-rows: 10% 85% 5%;
+  grid-template-areas:
+  "categories"
+  "media"
+  "nav";
+  display: grid;
+  background: red;
+}
+
+.category {
+  background: #CCCCCC;
+  padding: 0 1em;
+  font-size: 1.4em
+}
+
+.media {
+  background: #EEEEEE;
+  padding: 0 1em
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #333333;
+  font-size: 1.2em;
+  color: #DDDDDD;
+}
