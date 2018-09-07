@@ -1,11 +1,15 @@
 import React, { Component } from "react";
+import '../css/slideshow.css';
 
 export default class Nav extends Component {
   render() {
     return (
-      <div className="nav">
-        <p>NAV</p>
-      </div>
+      <ul className="nav">
+        <li>•</li>
+        <li>•</li>
+        <li>•</li>
+        <li>•</li>
+      </ul>
     );
   }
 }
