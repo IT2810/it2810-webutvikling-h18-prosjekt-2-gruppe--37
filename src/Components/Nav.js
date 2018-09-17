@@ -6,7 +6,7 @@ export default class Nav extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      navItems: Array(4).fill(false)
+      navItems: Array(4).fill(true, 0, 1)
     };
   }
 
