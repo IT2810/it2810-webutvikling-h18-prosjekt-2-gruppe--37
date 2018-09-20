@@ -9,23 +9,30 @@ export default class Content extends Component {
     super(props);
     this.state = {
       category: 0,
-      option: 0
+      option: 0,
+      nav: 0
     };
   }
 
-  onClick(cat, opt) {
+  onClickCategory(cat, opt) {
     this.setState({
       category: cat,
       option: opt
     });
   }
 
+  onClickNav(nav) {
+    this.setState({
+      nav: nav
+    })
+  }
+
   render() {
     return (
         <div className="content">
-          <Category onClick={this.onClick.bind(this)}/>
-          <Media option={this.state.option} category={this.state.category}/>
-          <Nav />
+          <Category onClick={this.onClickCategory.bind(this)}/>
+          <Media option={this.state.option} category={this.state.category} nav={this.state.nav}/>
+          <Nav onClick={this.onClickNav.bind(this)}/>
         </div>
     );
   }

@@ -34,9 +34,13 @@ export default class Nav extends Component {
     return <NavItem focus={this.state.navItems[i]} onClick={() => this.handleClick(i)}/>;
   }
 
+  update() {
+    this.props.onClick(this.getSelectedNumber());
+  }
+
   render() {
     return (
-      <ul className="nav">
+      <ul onClick={this.update.bind(this)} className="nav">
         {this.renderNavItem(0)}
         {this.renderNavItem(1)}
         {this.renderNavItem(2)}
