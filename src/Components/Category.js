@@ -58,12 +58,17 @@ export default class Category extends Component {
   render() {
     return (
       <div className="category">
-        {this.renderItem(0)}
-        {this.renderItem(1)}
-        {this.renderItem(2)}
-        {this.renderOption(0)}
-        {this.renderOption(1)}
-        {this.renderOption(2)}
+        <div className="catItems">
+          {this.renderItem(0)}
+          {this.renderItem(1)}
+          {this.renderItem(2)}
+        </div>
+
+        <div className="catOptions">
+          {this.renderOption(0)}
+          {this.renderOption(1)}
+          {this.renderOption(2)}
+        </div>
       </div>
     );
   }
