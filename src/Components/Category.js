@@ -55,13 +55,13 @@ export default class Category extends Component {
     onClick={() => this.handleClickOption(i, this.getSelectedCategory())}/>;
   }
 
-  keepStat() {
-    return this.state;
+  update() {
+    this.props.onClick(this.getSelectedCategory(), this.getSelectedOption());
   }
 
   render() {
     return (
-      <div className="category">
+      <div onClick={this.update.bind(this)} className="category">
         {this.renderItem(0)}
         {this.renderItem(1)}
         {this.renderItem(2)}
