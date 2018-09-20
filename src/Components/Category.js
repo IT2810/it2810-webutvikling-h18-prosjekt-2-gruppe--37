@@ -55,6 +55,10 @@ export default class Category extends Component {
     onClick={() => this.handleClickOption(i, this.getSelectedCategory())}/>;
   }
 
+  keepStat() {
+    return this.state;
+  }
+
   render() {
     return (
       <div className="category">
