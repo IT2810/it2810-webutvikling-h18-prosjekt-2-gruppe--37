@@ -16,12 +16,16 @@ export default class Nav extends Component {
   }
 
   handleClick(i) {
-    const navItems = this.state.navItems.slice();
-    for (let i = 0; i < navItems.length; i++) {
-        navItems[i] = false;
+    const locaNavItems = this.state.navItems.slice();
+    for (let i = 0; i < locaNavItems.length; i++) {
+        locaNavItems[i] = false;
     }
-    navItems[i] = true;
-    this.setState({navItems: navItems});
+    locaNavItems[i] = true;
+    this.setState({
+      navItems: locaNavItems}, () => {
+        //Fix for async state
+        this.update();
+    });
   }
 
   getSelectedNumber() {
@@ -40,7 +44,7 @@ export default class Nav extends Component {
 
   render() {
     return (
-      <ul onClick={this.update.bind(this)} className="nav">
+      <ul className="nav">
         {this.renderNavItem(0)}
         {this.renderNavItem(1)}
         {this.renderNavItem(2)}

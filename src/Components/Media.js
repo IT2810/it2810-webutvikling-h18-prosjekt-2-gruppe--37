@@ -60,9 +60,7 @@ render() {
             <div className="media">
                 <p>{quotes.melancholic[0].text}</p>
                 <div id="image" />
-                <audio controls>
-                    <source src="#"/>
-                </audio>
+                <audio controls autoPlay loop src={this.props.test}/>
             </div>
         );
     }
@@ -70,9 +68,7 @@ render() {
         <div className="media">
             <p>media</p>
             <div id="image" />
-            <audio controls>
-            <source src="#"/>
-            </audio>
+            <audio controls autoPlay loop src={"sounds/elated/0.mp3"}/>
         </div>
         );
     }

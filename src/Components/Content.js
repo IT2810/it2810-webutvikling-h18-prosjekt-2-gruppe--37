@@ -10,14 +10,23 @@ export default class Content extends Component {
     this.state = {
       category: 0,
       option: 0,
-      nav: 0
+      nav: 0,
+      soundSrc: "sounds/elated/"
     };
+  }
+
+  getSoundSource() {
+    let partialSrcArr = ["sounds/elated/", "sounds/furious/", "sounds/melancholic/"]
+    if (this.state.category === 2) {
+      return partialSrcArr[this.state.option];
+    } return this.state.soundSrc;
   }
 
   onClickCategory(cat, opt) {
     this.setState({
+      option: opt,
       category: cat,
-      option: opt
+      soundSrc: this.getSoundSource()
     });
   }
 
@@ -31,7 +40,7 @@ export default class Content extends Component {
     return (
         <div className="content">
           <Category onClick={this.onClickCategory.bind(this)}/>
-          <Media option={this.state.option} category={this.state.category} nav={this.state.nav}/>
+          <Media option={this.state.option} category={this.state.category} nav={this.state.nav} test={this.getSoundSource() + this.state.nav + ".mp3"}/>
           <Nav onClick={this.onClickNav.bind(this)}/>
         </div>
     );

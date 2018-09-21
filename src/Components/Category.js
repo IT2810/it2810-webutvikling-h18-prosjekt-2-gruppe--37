@@ -19,18 +19,22 @@ export default class Category extends Component {
     this.options = ["Elated", "Furious", "Melancholic"];
   }
 
-  handleClickItem(i) {
+  handleClickCategory(i) {
     const selCat = this.state.selCat.slice();
     for (let i = 0; i < selCat.length; i++) { selCat[i] = false;}
     selCat[i] = true;
-    this.setState({selCat: selCat});
+    this.setState({selCat: selCat}, () => {
+      this.update();
+    });
   }
 
   handleClickOption(i, catIndex) {
     const catOpt = this.state.catOpt.slice();
     for (let i = 0; i < catOpt[catIndex].length; i++) {catOpt[catIndex][i] = false;}
     catOpt[catIndex][i] = true;
-    this.setState({catOpt: catOpt});
+    this.setState({catOpt: catOpt}, () => {
+      this.update();
+    });
   }
 
   getSelectedCategory() {
@@ -47,7 +51,7 @@ export default class Category extends Component {
   }
 
   renderItem(i) {
-    return <CategoryItem text={this.categories[i]} focus={this.state.selCat[i]} onClick={() => this.handleClickItem(i)}/>;
+    return <CategoryItem text={this.categories[i]} focus={this.state.selCat[i]} onClick={() => this.handleClickCategory(i)}/>;
   }
 
   renderOption(i) {
@@ -61,7 +65,7 @@ export default class Category extends Component {
 
   render() {
     return (
-      <div onClick={this.update.bind(this)} className="category">
+      <div className="category">
         {this.renderItem(0)}
         {this.renderItem(1)}
         {this.renderItem(2)}
