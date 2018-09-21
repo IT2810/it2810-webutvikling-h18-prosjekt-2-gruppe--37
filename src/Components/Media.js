@@ -8,19 +8,24 @@ export default class Media extends Component {
       lastSelectedOption: null,
       loaded: false
     }
+    this.lastSelectedOption=null;
   }
 
   getText() {
     if (this.props.category === 1) {
       if (this.props.option === 0) {
+        this.lastSelectedOption = this.state.quotes.elated;
         return this.state.quotes.elated;
       } else if (this.props.option === 1) {
+        this.lastSelectedOption = this.state.quotes.furious;
         return this.state.quotes.furious;
       } else if (this.props.option === 2) {
+        this.lastSelectedOption = this.state.quotes.melancholic;
         return this.state.quotes.melancholic;
       }
     }
-      return this.state.lastSelectedOption;
+    console.log(this.lastSelectedOption);
+    return this.lastSelectedOption;
   }
 
   axiosGetJSON() {
@@ -30,13 +35,14 @@ export default class Media extends Component {
         this.setState({
           loaded: true,
           quotes: response.data.quotes,
-          lastSelectedOption: response.data.quotes.elated
+
         })
+        this.lastSelectedOption = response.data.quotes.elated;
       })
   }
 
   render() {
-    if (this.state.loaded) {
+    if (this.state.loaded && this.getText() != null) {
       let selectedJSON = this.getText()[this.props.nav];
       return (
         <div className="media">
