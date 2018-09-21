@@ -11,7 +11,9 @@ export default class Content extends Component {
       category: 0,
       option: 0,
       nav: 0,
-      soundSrc: "sounds/elated/"
+      soundSrc: "sounds/elated/",
+      imgSrc: "pictures/elated",
+      images: Array(12).fill(null)
     };
   }
 
@@ -22,17 +24,44 @@ export default class Content extends Component {
     } return this.state.soundSrc;
   }
 
+  getImgSrc() {
+    let partialSrcArr = ["pictures/elated", "pictures/furious", "pictures/melancholic"]
+    if (this.state.category === 0) {
+      return partialSrcArr[this.state.option];
+    } return this.state.imgSrc;
+  }
+
+  getImage() {
+    let tempArray = this.state.images.slice();
+    return tempArray[this.state.nav];
+  }
+
+  axiosGetImg() {
+    const axios = require("axios");
+    axios.get(this.getImgSrc() + this.state.nav + ".svg")
+    .then ((response) => {
+      let tempArray = this.state.images.slice();
+      if (tempArray[this.state.nav] !== response.data) {
+        tempArray[this.state.nav] = response.data;
+        this.setState({
+          images: tempArray
+        })
+      }
+    })
+  }
+
   onClickCategory(cat, opt) {
     this.setState({
       option: opt,
       category: cat,
-      soundSrc: this.getSoundSource()
+      soundSrc: this.getSoundSource(),
+      imgSrc: this.getImgSrc(),
     });
   }
 
   onClickNav(nav) {
     this.setState({
-      nav: nav
+      nav: nav,
     })
   }
 
@@ -40,9 +69,17 @@ export default class Content extends Component {
     return (
         <div className="content">
           <Category onClick={this.onClickCategory.bind(this)}/>
-          <Media option={this.state.option} category={this.state.category} nav={this.state.nav} test={this.getSoundSource() + this.state.nav + ".mp3"}/>
+          <Media soundSrc={this.getSoundSource() + this.state.nav + ".mp3"} img={this.getImage()}/>
           <Nav onClick={this.onClickNav.bind(this)}/>
         </div>
     );
+  }
+
+  componentDidMount() {
+    this.axiosGetImg();
+  }
+
+  componentDidUpdate() {
+    this.axiosGetImg();
   }
 }

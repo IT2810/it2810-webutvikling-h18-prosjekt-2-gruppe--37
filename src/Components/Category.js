@@ -2,12 +2,6 @@ import React, { Component } from "react";
 import CategoryItem from "./CategoryItem.js";
 import CategoryOption from "./CategoryOption";
 
-/*
-  To connect the AJAX loading with the userinput, just call;
-  - this.getSelectedOption(); for the 'mood' &
-  - this.getSelectedCategory(); for the mediatype
-*/
-
 export default class Category extends Component {
   constructor(props) {
     super(props);
