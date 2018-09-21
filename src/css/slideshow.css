@@ -160,7 +160,7 @@ audio {
 */
 
 /* For desktop: */
-@media only screen and (min-width: 1024px) {
+@media only screen and (orientation: landscape) {
 
 .content {
   display: grid;
@@ -206,6 +206,6 @@ audio {
   }
 
   .mediaText {
-    font-size: 2.6em;
+    font-size: calc(1.0vw + 1.0vh + .5vmin);
   }
 }
