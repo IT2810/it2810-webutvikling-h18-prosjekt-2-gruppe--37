@@ -39,15 +39,15 @@ export default class Content extends Component {
   axiosGetImg() {
     const axios = require("axios");
     axios.get(this.getImgSrc() + this.state.nav + ".svg")
-    .then ((response) => {
-      let tempArray = this.state.images.slice();
-      if (tempArray[this.state.nav] !== response.data) {
-        tempArray[this.state.nav] = response.data;
-        this.setState({
-          images: tempArray
-        })
-      }
-    })
+      .then ((response) => {
+        let tempArray = this.state.images.slice();
+        if (tempArray[this.state.nav] !== response.data) {
+          tempArray[this.state.nav] = response.data;
+          this.setState({
+            images: tempArray
+          })
+        }
+      })
   }
 
   onClickCategory(cat, opt) {
@@ -69,7 +69,7 @@ export default class Content extends Component {
     return (
         <div className="content">
           <Category onClick={this.onClickCategory.bind(this)}/>
-          <Media soundSrc={this.getSoundSource() + this.state.nav + ".mp3"} img={this.getImage()}/>
+          <Media option={this.state.option} category={this.state.category} nav={this.state.nav} soundSrc={this.getSoundSource() + this.state.nav + ".mp3"} img={this.getImage()}/>
           <Nav onClick={this.onClickNav.bind(this)}/>
         </div>
     );

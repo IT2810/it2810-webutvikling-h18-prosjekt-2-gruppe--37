@@ -58,13 +58,9 @@
     height: 100%;
 }
 
-
-
 .catItem:hover {
   background: rgba(0, 0, 0, 0.6);
 }
-
-
 
 .elated {
   background-image: url("../assets/categories_images/elated.png");
@@ -83,6 +79,7 @@
 
 
 #image {
+    grid-area: image;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -101,14 +98,20 @@
   height: 100%;
   display: grid;
   grid-template-areas:
-  "."
+  "image"
   "text";
   grid-template-rows: 80% 20%;
   grid-template-columns: 100%;
 
 }
 
-.media >p {
+.mediaText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2em 1em;
+  font-size: 1.8vh;
   grid-area: text;
   background: #DDDDDD;
 }
@@ -117,8 +120,6 @@ audio {
   grid-area: audio;
   width: 100%;
 }
-
-
 
 .nav {
   padding: 0;
@@ -139,7 +140,6 @@ audio {
               inset 0 -3em 0 0 rgba(0, 0, 0, 0.5);
 }
 
-
 .nav > li {
   display: flex;
   align-items: center;
@@ -147,25 +147,13 @@ audio {
   height: 100%;
 }
 
-
-
 .nav > li:hover {
   background: rgba(255, 255, 255, 0.1);
 }
 
-
-
 .selected {
   color: #EEEEEE;
 }
-
-/* Skulle gjerne fikset slik at valgt bilde i nav-bar har annen bakgrunnsfarge*/
-
-
-
-
-
-
 
 /* For tablets:
 @media only screen and (min-width: 768px) {
@@ -183,7 +171,6 @@ audio {
                         "nav category";
 }
 
-
 .nav > li {
   display: flex;
   align-items: center;
@@ -192,8 +179,6 @@ audio {
   height: 100%;
   justify-content: center;
 }
-
-
 
 .catOptions {
   flex-direction: column;
@@ -204,16 +189,12 @@ audio {
     font-size: calc(1.5vw + 1.5vh + .5vmin);
 }
 
-
 .catItems {
     height: 15%;
 }
 .catItem {
     font-size: calc(.5vw + .5vh + .5vmin);
 }
-
-
-
 
 .nav > li {
     display: flex;
@@ -223,6 +204,8 @@ audio {
     /* For å få større tekst i knappene*/
     font-size: 7vmin;
   }
+
+  .mediaText {
+    font-size: 2.6em;
+  }
 }
-
-
