@@ -1,5 +1,6 @@
 {
   "name": "app",
+  "homepage" : "http://it2810-37.idi.ntnu.no/prosjekt2",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

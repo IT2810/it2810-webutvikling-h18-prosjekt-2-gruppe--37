@@ -7,7 +7,7 @@ export default class Media extends Component {
       quotes: null,
       lastSelectedOption: null,
       loaded: false
-    }
+    };
     this.lastSelectedOption=null;
   }
 
@@ -24,7 +24,6 @@ export default class Media extends Component {
         return this.state.quotes.melancholic;
       }
     }
-    console.log(this.lastSelectedOption);
     return this.lastSelectedOption;
   }
 
@@ -36,7 +35,7 @@ export default class Media extends Component {
           loaded: true,
           quotes: response.data.quotes,
 
-        })
+        });
         this.lastSelectedOption = response.data.quotes.elated;
       })
   }
