@@ -2,12 +2,6 @@ import React, { Component } from "react";
 import CategoryItem from "./CategoryItem.js";
 import CategoryOption from "./CategoryOption";
 
-/*
-  To connect the AJAX loading with the userinput, just call;
-  - this.getSelectedOption(); for the 'mood' &
-  - this.getSelectedCategory(); for the mediatype
-*/
-
 export default class Category extends Component {
   constructor(props) {
     super(props);
@@ -19,18 +13,22 @@ export default class Category extends Component {
     this.options = ["Elated", "Furious", "Melancholic"];
   }
 
-  handleClickItem(i) {
+  handleClickCategory(i) {
     const selCat = this.state.selCat.slice();
     for (let i = 0; i < selCat.length; i++) { selCat[i] = false;}
     selCat[i] = true;
-    this.setState({selCat: selCat});
+    this.setState({selCat: selCat}, () => {
+      this.update();
+    });
   }
 
   handleClickOption(i, catIndex) {
     const catOpt = this.state.catOpt.slice();
     for (let i = 0; i < catOpt[catIndex].length; i++) {catOpt[catIndex][i] = false;}
     catOpt[catIndex][i] = true;
-    this.setState({catOpt: catOpt});
+    this.setState({catOpt: catOpt}, () => {
+      this.update();
+    });
   }
 
   getSelectedCategory() {
@@ -47,12 +45,16 @@ export default class Category extends Component {
   }
 
   renderItem(i) {
-    return <CategoryItem text={this.categories[i]} focus={this.state.selCat[i]} onClick={() => this.handleClickItem(i)}/>;
+    return <CategoryItem text={this.categories[i]} focus={this.state.selCat[i]} onClick={() => this.handleClickCategory(i)}/>;
   }
 
   renderOption(i) {
     return <CategoryOption text={this.options[i]} index={i} focus={this.state.catOpt[this.getSelectedCategory()][i]}
     onClick={() => this.handleClickOption(i, this.getSelectedCategory())}/>;
+  }
+
+  update() {
+    this.props.onClick(this.getSelectedCategory(), this.getSelectedOption());
   }
 
   render() {
