@@ -82,6 +82,18 @@
 }
 
 
+#image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#image > svg {
+    height: 100%;
+    width: 100%;
+}
+
+
 /* media er text + bilde + lydfil*/
 .media {
   grid-area: media;
@@ -90,9 +102,8 @@
   display: grid;
   grid-template-areas:
   "."
-  "text"
-  "audio";
-  grid-template-rows: 65% 20% 15%;
+  "text";
+  grid-template-rows: 80% 20%;
   grid-template-columns: 100%;
 
 }
