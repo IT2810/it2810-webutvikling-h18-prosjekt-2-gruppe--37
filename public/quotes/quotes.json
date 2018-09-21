@@ -1,0 +1,24 @@
+{
+  "quotes" : {
+    "melancholic" : [
+      {"author" : "Carl Jung", "text" : "The word 'happy' would lose its meaning if it were not balanced by sadness.", "license" : "0"},
+      {"author" : "Henry Rollins", "text" : "It's sad when someone you know becomes someone you knew.", "license" : "0"},
+      {"author" : "Christopher Morley", "text" : "Heavy hearts, like heavy clouds in the sky, are best relieved by the letting of a little water.", "license" : "0"},
+      {"author" : "Bob Marley", "text" : "The good times of today, are the sad thoughts of tomorrow.", "license" : "0"}
+    ],
+
+    "elated" : [
+      {"author" : "George Sand", "text" : "There is only one happiness in this life, to love and be loved.", "license" : "0"},
+      {"author" : "Omar Khayyam", "text" : "Be happy for this moment. This moment is your life.", "license" : "0"},
+      {"author" : "John Harrigan", "text" : "Happiness held is the seed; Happiness shared is the flower.", "license" : "0"},
+      {"author" : "Gertrude Stein", "text" : "Whoever said money can't buy happiness simply didn't know where to go shopping.", "license" : "0"}
+    ],
+
+    "furious" : [
+      {"author" : "Ralph Waldo Emerson", "text" : "For every minute you remain angry, you give up sixty seconds of peace of mind.", "license" : "0"},
+      {"author" : "Laurence J. Peter", "text" : "Speak when you are angry - and you'll make the best speech you'll ever regret.", "license" : "0"},
+      {"author" : "Christopher Morley", "text" : "A man who has never made a woman angry is a failure in life.", "license" : "0"},
+      {"author" : "Thomas Jefferson", "text" : "When angry count to ten before you speak. If very angry, count to one hundred.", "license" : "0"}
+    ]
+  }
+}

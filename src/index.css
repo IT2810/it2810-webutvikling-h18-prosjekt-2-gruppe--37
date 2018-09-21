@@ -1,5 +1,15 @@
-body {
+* {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+}
+/*Source: https://stackoverflow.com/questions/2310734/how-to-make-html-text-unselectable#6382492*/
+.no_select {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  cursor: pointer;
 }

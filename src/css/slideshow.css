@@ -1,0 +1,211 @@
+.content {
+  grid-area: content;
+  grid-template-columns: 1fr;
+  grid-template-rows: 15% 75% 10%;
+  grid-template-areas:
+  "category"
+  "media"
+  "nav";
+  display: grid;
+}
+
+.category {
+  grid-area: category;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background: #999999;
+  font-size: 1.4em;
+  color: #777777;
+}
+
+.catItems {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 40%;
+}
+
+
+.catItem {
+  display: flex;
+  justify-content: center;
+  font-size: calc(1vw + 1vh + .5vmin);
+  align-items: center;
+  width: 33.33%;
+  height: 100%;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.5);
+  background: #333333;
+}
+
+
+.catOptions {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 60%;
+}
+
+.option {
+    /* For å få den til å skalere begge veier*/
+    font-size: calc(1.5vw + 1.5vh + .5vmin);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 33.33%;
+    height: 100%;
+}
+
+.catItem:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.elated {
+  background-image: url("../assets/categories_images/elated.png");
+  background-repeat: repeat;
+}
+
+.furious {
+  background-image: url("../assets/categories_images/furious.png");
+  background-repeat: repeat;
+}
+
+.melancholic {
+  background-image: url("../assets/categories_images/melancholic.png");
+  background-repeat: repeat;
+}
+
+
+#image {
+    grid-area: image;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#image > svg {
+    height: 100%;
+    width: 100%;
+}
+
+
+/* media er text + bilde + lydfil*/
+.media {
+  grid-area: media;
+  background: #EEEEEE;
+  height: 100%;
+  display: grid;
+  grid-template-areas:
+  "image"
+  "text";
+  grid-template-rows: 80% 20%;
+  grid-template-columns: 100%;
+
+}
+
+.mediaText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2em 1em;
+  font-size: 1.8vh;
+  grid-area: text;
+  background: #DDDDDD;
+}
+
+audio {
+  grid-area: audio;
+  width: 100%;
+}
+
+.nav {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  grid-area: nav;
+  justify-content: center;
+  align-items: center;
+  font-size: 210%;
+  color: #777777;
+  background: #333333;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  box-shadow: inset 0 0.1em 0 0 rgba(255, 255, 255, .5),
+              inset 0 -0.1em 0 0 rgba(0, 0, 0, 0.9),
+              inset 0 -3em 0 0 rgba(0, 0, 0, 0.5);
+}
+
+.nav > li {
+  display: flex;
+  align-items: center;
+  padding: 0 0.4em;
+  height: 100%;
+}
+
+.nav > li:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.selected {
+  color: #EEEEEE;
+}
+
+/* For tablets:
+@media only screen and (min-width: 768px) {
+*/
+
+/* For desktop: */
+@media only screen and (min-width: 1020px) {
+
+.content {
+  display: grid;
+  grid-area: content;
+  grid-template-columns: 75% 25%;
+  grid-template-rows: 90% 10%;
+  grid-template-areas: "media category"
+                        "nav category";
+}
+
+.nav > li {
+  display: flex;
+  align-items: center;
+
+  width: 25%;
+  height: 100%;
+  justify-content: center;
+}
+
+.catOptions {
+  flex-direction: column;
+  height: 85%;
+}
+.option {
+    width: 100%;
+    font-size: calc(1.5vw + 1.5vh + .5vmin);
+}
+
+.catItems {
+    height: 15%;
+}
+.catItem {
+    font-size: calc(.5vw + .5vh + .5vmin);
+}
+
+.nav > li {
+    display: flex;
+    align-items: center;
+    padding: 0 0.4em;
+    height: 100%;
+    /* For å få større tekst i knappene*/
+    font-size: 7vmin;
+  }
+
+  .mediaText {
+    font-size: 2.6em;
+  }
+}
