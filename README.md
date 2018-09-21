@@ -27,6 +27,7 @@ Lydene er på formatet mp3. Alle er mellom 2-8 sekunder lange, og går i loop p�
 
 ### Krav til bruk av teknologi
 __React__
+
 Vår løsning er totalt basert på React. Den er opprettet ved hjelp av kommandoen ‘npx create-react-app’ og node slik oppgaven spesifiserte. Det har vært positivt å bruke React av flere grunner. Ettersom React er komponent-basert, forblir koden lesbar, da den deles inn i flere naturlige komponenter. Vi erfarte at react var et nokså intuitivt rammeverk å sette seg inn i, og det gikk fort å lære. 
 
 Komponent strukturen var også en stor fordel når vi skulle laste inn de ulike mediefilene. React kjører sitt eget virtuelle DOM, og oppdaterer kun nettleseren sitt DOM når det er nødvendig, og kun den delen av det som har endret seg. Dette gjør at siden er raskere enn den hadde vært med en tradisjonell implementasjon.
@@ -36,12 +37,14 @@ Komponenter egner seg også veldig godt til gjenbruk av kode, noe vi har gjort m
 Når vi tok valget om å lage en ny komponent, vurderte vi om elementet måtte oppbevare informasjon, eller ha en noenlunde avansert funksjonalitet. Dersom det ikke hadde det, implementerte vi det bare i JSX hos parent.
 
 __Ajax__
+
 Som spesifisert i oppgaven har vi brukt AJAX. I starten brukte vi standard XMLHttpRequest - før vi gikk videre til fetch() for så å bytte til axios. XMLHttpRequest er ganske lavnivå, men fint å bruke for å forstå litt hvordan AJAX fungerer. Vi valgte å bruke axios ettersom det så oversiktlig og enkelt ut. Axios har metodene vi trengte og med node er det veldig lett å installere. 
 
 Vi implementerte axios.get() to separate steder: en for å hente ut svg bilde, og en for å hente ut json fila med sitater. Å hente ut json fila er veldig kjekt med Axios, den konverterer den til javascript-objekter med en gang som vi enkelt kan bruke, uten å kalle parse() eller stringify().
 Tilsvarende enkelt var det med svg-bildene, Axios “henter” dem enkelt fra serveren og “serverer” dem til oss som XML. 
 
 __Responsive Web Design__
+
 Vi har benyttet flere ulike teknologier for å oppnå et mest mulig responsivt webdesign. Siden vår benytter CSS grid, der elementene inn i hver kolonne fyller opp en gitt %-andel av plassen. Noen av elementene har vi også valgt å gi en bestemt vw(viewport-width), vh(viewport-height) eller vmin(viewport of smallest side). Dermed er layouten flytende. Altså at elementene tilpasser seg containeren den tilhører.
 
 Designet er i hovedsak laget for mobil-view, siden pc-utgave i mobil ser ille ut, ikke nødvendigvis motsatt. For å gjøre siden mer flexibel/ responsiv, og at den gir best opplevelse for alle enheter, har vi valgt å benytte @media-queries, slik at elementene på siden flytter seg for personer som besøker siden med tablet/ pc. 
@@ -49,9 +52,11 @@ Designet er i hovedsak laget for mobil-view, siden pc-utgave i mobil ser ille ut
 Alle bildene som er benyttet er av typen SVG (Scalable Vector Graphics). Siden dette er vektorgrafikk, gjør dette at de kan skalere vertikalt og horisontalt.
 
 __Git__
+
 Vi organiserte repositoriet omtrent som vi lærte i git-forelesning. Vi hadde en master branch som vi sjeldent oppdaterte. En Develop branch som vi oppdaterte hver gang vi la til en ny feature. I tillegg til de, hadde vi feature branches, som var knyttet til issues for det meste var maks èn person per branch. I hver commit(så sant det lar seg gjøre) knytter den opp til et issue og beskriver endringene i korte trekk.
 
 __Node.js & NPM__
+
 Vi satt opp prosjektet ved hjelp av npm. Vi brukte kommandoen 'npx create-react-app' for å sette opp standard dependencies og npm kommandoer, sånn som npm start og npm run build. Vi importerte også bibliotekene classnames og axios for hhv. conditional css klasser og Ajax kall.
 
 ### Testing:
