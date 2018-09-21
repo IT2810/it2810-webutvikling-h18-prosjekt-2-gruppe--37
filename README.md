@@ -60,14 +60,14 @@ Som beskrevet i layout, endrer siden oppsett basert på skjermorientering. For �
 Hjemmesiden har skalert godt for alle enhetene vi testet på. Samsung Galaxy S5, Ipad, PC, og i tillegg for responsiv (der vi regulerte skjermen kontinuerlig for å se endringene).
 
 ### Kilder
-1. [https://reactjs.org/tutorial/tutorial.html](https://reactjs.org/tutorial/tutorial.html)
-2. [https://reactjs.org/docs/handling-events.html](https://reactjs.org/docs/handling-events.html)
-3. [https://stackoverflow.com/questions/44472827/how-to-get-the-latest-selected-value-in-reactjs?noredirect=1&lq=1](https://stackoverflow.com/questions/44472827/how-to-get-the-latest-selected-value-in-reactjs?noredirect=1&lq=1)
-4. [https://stackoverflow.com/questions/2310734/how-to-make-html-text-unselectable#6382492](https://stackoverflow.com/questions/2310734/how-to-make-html-text-unselectable#6382492)
-5. [https://stackoverflow.com/questions/24147331/react-the-right-way-to-pass-form-element-state-to-sibling-parent-elements#24151862](https://stackoverflow.com/questions/24147331/react-the-right-way-to-pass-form-element-state-to-sibling-parent-elements#24151862)
-6. [https://stackoverflow.com/questions/41147874/react-native-parent-child-communication-and-return-values#41148983](https://stackoverflow.com/questions/41147874/react-native-parent-child-communication-and-return-values#41148983)
-7. [https://stackoverflow.com/questions/32370994/how-to-pass-props-to-this-props-children?noredirect=1&lq=1](https://stackoverflow.com/questions/32370994/how-to-pass-props-to-this-props-children?noredirect=1&lq=1)
-8. [https://stackoverflow.com/questions/35850118/setting-state-on-componentdidmount#35853603](https://stackoverflow.com/questions/35850118/setting-state-on-componentdidmount#35853603)
-9. [https://stackoverflow.com/questions/29490581/react-state-not-updated](https://stackoverflow.com/questions/29490581/react-state-not-updated)
+* [https://reactjs.org/tutorial/tutorial.html](https://reactjs.org/tutorial/tutorial.html)
+* [https://reactjs.org/docs/handling-events.html](https://reactjs.org/docs/handling-events.html)
+* [https://stackoverflow.com/questions/44472827/how-to-get-the-latest-selected-value-in-reactjs?noredirect=1&lq=1](https://stackoverflow.com/questions/44472827/how-to-get-the-latest-selected-value-in-reactjs?noredirect=1&lq=1)
+* [https://stackoverflow.com/questions/2310734/how-to-make-html-text-unselectable#6382492](https://stackoverflow.com/questions/2310734/how-to-make-html-text-unselectable#6382492)
+* [https://stackoverflow.com/questions/24147331/react-the-right-way-to-pass-form-element-state-to-sibling-parent-elements#24151862](https://stackoverflow.com/questions/24147331/react-the-right-way-to-pass-form-element-state-to-sibling-parent-elements#24151862)
+* [https://stackoverflow.com/questions/41147874/react-native-parent-child-communication-and-return-values#41148983](https://stackoverflow.com/questions/41147874/react-native-parent-child-communication-and-return-values#41148983)
+* [https://stackoverflow.com/questions/32370994/how-to-pass-props-to-this-props-children?noredirect=1&lq=1](https://stackoverflow.com/questions/32370994/how-to-pass-props-to-this-props-children?noredirect=1&lq=1)
+* [https://stackoverflow.com/questions/35850118/setting-state-on-componentdidmount#35853603](https://stackoverflow.com/questions/35850118/setting-state-on-componentdidmount#35853603)
+* [https://stackoverflow.com/questions/29490581/react-state-not-updated](https://stackoverflow.com/questions/29490581/react-state-not-updated)
 
 
